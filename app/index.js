@@ -21,8 +21,8 @@ async function run() {
 
     // octokit getreviewsforrun method execution
     const run_data = await octokit.rest.actions.getReviewsForRun({
-        owner: context.repo.owner,
-        repo: context.repo.repo,
+        owner: github.context.repo.owner,
+        repo: github.context.repo.repo,
         run_id: run_id
     })
     
