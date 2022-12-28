@@ -1,0 +1,22 @@
+{
+  "name": "deployment-review-comment",
+  "version": "1.0.0",
+  "description": "Extract the deployment review comment specified as part of Manual approval/rejection of a workflow execution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambilykk/deployment-review-comment.git"
+  },
+  "author": "ambilykk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ambilykk/deployment-review-comment/issues"
+  },
+  "homepage": "https://github.com/ambilykk/deployment-review-comment#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  }
+}
