@@ -3,7 +3,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 // get the input value run-id
-const run_id = core.getInput('run-id');
+let run_id = core.getInput('run-id');
 
 // if run_id is not provided, use the current run id
 run_id = run_id ? run_id : github.context.runId;
