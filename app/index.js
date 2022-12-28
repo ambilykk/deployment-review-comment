@@ -31,11 +31,7 @@ async function run() {
         console.log(data.comment);
         let env = '';
         data.environments.forEach(element => {
-            env = env + element + ' ';
-            console.log(element);
-            element.forEach(ele => {
-                console.log(ele);
-            })
+            env = env + element.name + ' ';
         });
 
         commentsRes.push({
