@@ -33,7 +33,7 @@ async function run() {
     }
 
     // set the output value
-    core.setOutput(comments, commentsRes);
+    core.setOutput('comments', commentsRes);
     console.log(commentsRes);
 
     // console the completion message
