@@ -26,16 +26,24 @@ Include the deployment-review-comment action in your workflow.
 
 ```
 
+2. Output generated
+
+Below screenshot shows the execution of the action after two deployment reviews - one for the environment **'dev'** and another for the environment **'test'**. Deployment *approved* for the **'test'** environment and *rejected* for the **'dev'** environment
+
+![Screenshot 2022-12-28 at 12 58 50 PM](https://user-images.githubusercontent.com/10282550/209775205-47184599-a18d-4b6e-ae8a-2d7a2d05b69e.png)
+
 
 ## Parameters
 
-| Name                           | Required  | Default Value | Description                                           |
+| Name                           | Required  | Input/Output | Description                                           |
 |--------------------------------|-----------|---------------|-------------------------------------------------------|
-| token                 | Yes |  | PAT Token for access    |
-| run-id                      | No |  | Used for extracting the deployment review comments  not related to current run              |
+| token                 | Yes | Input | PAT Token for access    |
+| run-id                      | No | Input | Used for extracting the deployment review comments  not related to current run              |
+| comments                     |  | Output | Array of deployment review details. Review the **Output** section for the structure |
 
 ## Output
-comments - Single ouput defined as an array with following structure
+**comments** - ouput defined as an array with following structure
+
 ```
 [
     {
