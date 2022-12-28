@@ -20,7 +20,7 @@ async function run() {
     const commentsRes = [];
 
     // octokit getreviewsforrun method execution
-    const run_data = await octokit.actions.getReviewsForRun({
+    const run_data = await octokit.rest.actions.getReviewsForRun({
         owner: context.repo.owner,
         repo: context.repo.repo,
         run_id: run_id
