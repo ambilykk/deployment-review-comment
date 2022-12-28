@@ -25,11 +25,25 @@ async function run() {
         repo: github.context.repo.repo,
         run_id: run_id
     })
-    
+
     // for multiple comments
     for (const data of run_data.data) {
         console.log(data.comment);
-        commentsRes.push(data);
+        let env = '';
+        data.environments.forEach(element => {
+            env = env + element + ' ';
+            console.log(element);
+            element.forEach(ele => {
+                console.log(ele);
+            })
+        });
+
+        commentsRes.push({
+            user: data.user.login,
+            comment: data.comment,
+            state: data.state,
+            envitonment: env
+        });
     }
 
     // set the output value
