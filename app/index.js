@@ -1,5 +1,6 @@
 // libraries for github actions
 const core = require('@actions/core');
+const github = require('@actions/github');
 
 // get the input value run-id
 const run_id = core.getInput('run-id');
