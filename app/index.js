@@ -5,8 +5,11 @@ const github = require('@actions/github');
 // get the input value run-id
 let run_id = core.getInput('run-id');
 
+// get the input value token
+const token = core.getInput('token');
+
 // create an instace of octokit
-const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
+const octokit = github.getOctokit(token);
 
 // if run_id is not provided, use the current run id
 run_id = run_id ? run_id : github.context.runId;

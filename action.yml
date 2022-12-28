@@ -4,6 +4,9 @@ branding:
   icon: 'list'
   color: 'blue'
 inputs:  
+  token:
+    description: 'GitHub token'
+    required: true    
   run-id:
     type: string
     description: 'Run id of the workflow'
@@ -11,7 +14,7 @@ inputs:
 output:
   comments:
     description: 'Array of deployment review comments along with state and environment'
-    
+
 runs:
   using: 'node16'
   main: 'app/index.js'
