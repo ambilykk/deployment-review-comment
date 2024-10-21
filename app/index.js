@@ -38,7 +38,7 @@ async function run() {
             user: data.user.login,
             comment: data.comment,
             state: data.state,
-            envitonment: env
+            environment: env
         });
     }
 
